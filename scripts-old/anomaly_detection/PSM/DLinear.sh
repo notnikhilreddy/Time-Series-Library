@@ -1,0 +1,21 @@
+export CUDA_VISIBLE_DEVICES=6
+
+python -u run.py \
+  --task_name anomaly_detection \
+  --is_training 1 \
+  --root_path ./dataset/PSM \
+  --model_id PSM \
+  --model DLinear \
+  --data PSM \
+  --features M \
+  --seq_len 100 \
+  --pred_len 100 \
+  --d_model 128 \
+  --d_ff 128 \
+  --e_layers 3 \
+  --enc_in 25 \
+  --c_out 25 \
+  --anomaly_ratio 1 \
+  --batch_size $batch_size \
+  --train_epochs ${EPOCHS} \
+  --train_epochs=${EPOCHS}
